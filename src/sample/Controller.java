@@ -2,7 +2,8 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 public class Controller {
 
@@ -12,11 +13,13 @@ public class Controller {
     @FXML
     private Button ac;
 
+    @FXML
+    private Button point;
+
     private boolean start = true;
-    private int number1 = 0;
+    private Float number1;
     private String operator = "";
     private ArithmeticModel model = new ArithmeticModel();
-
 
 
     @FXML
@@ -49,23 +52,21 @@ public class Controller {
             if (!operator.isEmpty()) { //check if is not empty
                 return;
             }
-            operator = value; //+
-            number1 = Integer.valueOf(screenOutput.getText()); //22
+            operator = value;
+            number1 = Float.valueOf(screenOutput.getText());
             screenOutput.setText("0");
             start = true;
         } else {
             if (operator.isEmpty()) {
                 return;
             }
-            int number2 = Integer.valueOf(screenOutput.getText());
-            int result = model.calculate(number1, number2, operator);
+
+            Float number2 = Float.valueOf(screenOutput.getText());
+            Object result = model.calculate(number1, number2, operator);
             screenOutput.setText(String.valueOf(result));
             operator = "";
             start = true;
         }
-
-
-
 
 
     }
