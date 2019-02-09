@@ -54,7 +54,7 @@
 
                 <Button fx:id="zero" text="0" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2"
                         prefWidth="120" prefHeight="50" onAction="#onButtonClick"/>
-                <Button fx:id="point" text="." GridPane.rowIndex="4" GridPane.columnIndex="2" prefWidth="60" prefHeight="50" />
+                <Button fx:id="point" text="." GridPane.rowIndex="4" GridPane.columnIndex="2" prefWidth="60" prefHeight="50" onAction="#onButtonClick"/>
                 <Button fx:id="equal" text="=" GridPane.rowIndex="4" GridPane.columnIndex="3" prefWidth="60" prefHeight="50" onAction="#getTheOperator"/>
 
             </children>
