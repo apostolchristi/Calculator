@@ -1,6 +1,6 @@
 # Calculator 
 
-Hi, this is my first project. This is Calculator with the basic functions, created with JavaFX
+Hi, this is my first project. This is a Calculator with the basic functions, created with JavaFX
 
 Project it's on initial stage, so i'm still working on. Updates are comming...
 
